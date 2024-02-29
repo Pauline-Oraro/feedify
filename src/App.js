@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 import './App.css';
+import UserList from "./userList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [data, updateData] = useState([]);
+  //performs side effects in function components
+  useEffect(() => {
+    //request data from the url below
+    axios.get("https://randomuser.me/api/?results=50")
+    //accessing the resolved data
+    .then(response => {
+      const data = response.data.results;
+      updateData(data);
+    })
+    //accessing the error information when the promise fails
+    .catch(error => {
+      console.log(error)
+    });
+  }, [])
+  return(
+    <div>
+    <h1>FEEDIFY</h1>
+    <div>{data.map((item, index) => (
+      <UserList key={index} item={item} />
+    ))}
+    </div>
     </div>
   );
 }
