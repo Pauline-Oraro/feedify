@@ -3,55 +3,70 @@
 
 
 
-
-
 body{
-  background-color: darksalmon;
+  background-color: #67595E;
 }
 
 h1{
   font-family: Roboto;
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+
+  color: #E8B4B8;
+  text-decoration: underline;
 }
 
 .userContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 500px;
+
+  width: 100%;
 
   margin: 20px auto;
+  padding-left: -10px;
 }
 
 .cardBody{
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 10px;
+
   margin: 20px auto;
-  width: 500px;
+  width: 350px;
+
+  background-color: #A49393;
 }
 
 .cardHeader{
   text-align: center;
   border-bottom: 2px solid black;
+  display: block;
+  padding: 0;
 }
+
 
 .cardTitle, .cardHeader{
   font-family: Roboto;
 }
 
+.cardImage{
+  padding-left: 10px;
+}
 
 
 .cardImage img{
-  width: 150px;
-  border: 1px solid black;
+  width: 120px;
+  border: 2px solid black;
 }
 
 .userInfo{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .userText{
@@ -62,9 +77,11 @@ h1{
 
 .cardText{
   font-family: Roboto Condensed;
+  word-break: break-all;
 }
 
 .bold{
   font-family: Roboto Condensed;
   font-weight: bolder;
 }
+
