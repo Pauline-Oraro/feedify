@@ -3,7 +3,7 @@
 ![feedify](https://github.com/Pauline-Oraro/feedify/blob/master/public/Capture.PNG?raw=true)
 
 ## Demo
-Click [HERE]() to see the live demo
+Click [HERE](https://feedify-pi.vercel.app/) to see the live demo
 
 ## Tech Stack
 - HTML
